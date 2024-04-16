@@ -1,4 +1,4 @@
-package project;
+package exercise2.project;
 
 //医院挂号系统
 //1.新增科室、删除科室

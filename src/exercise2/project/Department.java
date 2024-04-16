@@ -1,4 +1,4 @@
-package project;
+package exercise2.project;
 
 import java.util.ArrayList;
 //科室

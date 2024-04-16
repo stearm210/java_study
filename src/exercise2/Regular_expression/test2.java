@@ -1,4 +1,4 @@
-package Regular_expression;
+package exercise2.Regular_expression;
 
 public class test2 {
     public static void main(String[] args) {

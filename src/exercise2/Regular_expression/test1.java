@@ -1,4 +1,4 @@
-package Regular_expression;
+package exercise2.Regular_expression;
 
 //验证qq号码是否正确,常规方法
 //qq号码在6-20长度之间，不能以0开头
