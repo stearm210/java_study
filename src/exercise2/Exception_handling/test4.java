@@ -24,5 +24,6 @@ public class test4 {
                 System.out.println("输入的不合理");
             }
         }
+
     }
 }
