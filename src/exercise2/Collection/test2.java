@@ -20,6 +20,11 @@ public class test2 {
         System.out.println(it.next());
         System.out.println(it.next());
 
+        //2.使用循环结合迭代器遍历集合
+        while (it.hasNext()){
+            String ele=it.next();
+            System.out.println(ele);
+        }
 
 
     }
