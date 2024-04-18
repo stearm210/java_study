@@ -3,6 +3,7 @@ package exercise2.Set;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class SetTest1 {
     public static void main(String[] args) {
@@ -26,5 +27,14 @@ public class SetTest1 {
         set1.add(777);
         System.out.println(set1);
 
+        //排序、不重复、无索引
+        Set<Integer> set2=new TreeSet<>();
+        set2.add(666);
+        set2.add(555);
+        set2.add(555);
+        set2.add(888);
+        set2.add(777);
+        set2.add(888);
+        System.out.println(set2);
     }
 }
