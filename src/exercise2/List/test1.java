@@ -1,4 +1,4 @@
-package exercise2.ArryList_LinkedList;
+package exercise2.List;
 
 import java.util.LinkedList;
 

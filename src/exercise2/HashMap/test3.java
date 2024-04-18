@@ -1,4 +1,4 @@
-package exercise2.HashMap_HashSet;
+package exercise2.HashMap;
 
 import java.util.ArrayList;
 import java.util.Iterator;
