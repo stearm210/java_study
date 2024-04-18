@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+//ArrayList类似于数组操作问题
+
 public class ListTest2 {
     public static void main(String[] args) {
         List<String> list=new ArrayList<>();
