@@ -16,5 +16,19 @@ public class LinkListTest1 {
         //出队操作
         System.out.println(queue.removeFirst());
         System.out.println(queue);
+
+        //设计栈的操作
+        //一般来说，使用栈操作时只需要使用其中一端进行操作
+        LinkedList<String> stack=new LinkedList<>();
+        //压栈
+        stack.push("A");
+        stack.push("B");
+        stack.push("C");
+        stack.push("D");
+        System.out.println(stack);
+
+        //出栈
+        System.out.println(stack.pop());
+        System.out.println(stack);
     }
 }
