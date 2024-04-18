@@ -34,6 +34,5 @@ public class ListTest2 {
         list.forEach(s->{
             System.out.println(s);
         });
-
     }
 }
