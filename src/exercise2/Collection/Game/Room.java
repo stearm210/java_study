@@ -49,7 +49,6 @@ public class Room {
 
         //正式发牌给玩家，先发51张牌，剩下三张牌用于地主
         //每三次发牌为一轮，因此需要对3求余来判断下一轮发牌
-
         for(int i=0;i<allCards.size()-3;i++){
         Card c=allCards.get(i);
         if(i%3==0){
@@ -60,12 +59,11 @@ public class Room {
             human3.add(c);
         }
     }
-        //对牌进行排序
+        //对牌进行排序,类似于人得到牌之后对牌进行整理
         sortCards(human1);
         sortCards(human2);
         sortCards(human3);
-        
-        
+
         //输出
         System.out.println("1"+human1);
         System.out.println("2"+human2);
@@ -79,11 +77,11 @@ public class Room {
         //
         //这里表示human1抢到这3张底牌
         human1.addAll(lastThreeCards);
-        sortCards(human1);//抢到地主之后再次排序
+        sortCards(human1);//抢到地主之后再次排序,即再次对牌进行整理
         System.out.println("human1抢到底牌"+human1);
     }
 
-    //集中进行排序
+    //集中进行排序，对发到的牌进行整理
     //使用比较器对象进行排序
     private void sortCards(List<Card> cards) {
         Collections.sort(cards, new Comparator<Card>() {
