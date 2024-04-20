@@ -1,9 +1,6 @@
-package exercise2.Map;
+package exercise2.Collection.Map;
 
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class MapTest2 {
     public static void main(String[] args) {
@@ -46,11 +43,11 @@ public class MapTest2 {
         System.out.println(map.containsValue(2));
         System.out.println(map.containsValue("2"));
 
-        //获取map集合中的全部键,使用一个set集合接取这些
+        //获取map集合中的全部键,使用一个set集合接取这些，因为set不重复
         Set<String> keys=map.keySet();
         System.out.println(keys);
 
-        //将对应的值放在collection集合中，这是由于值可能重复，因此选择使用collection没有定性要求
+        //将对应的值放在collection集合(collection包含两个类，可以对应到重复类的要求)中，这是由于值可能重复，因此选择使用collection没有定性要求
         Collection<Integer> values=map.values();
         System.out.println(values);
 
