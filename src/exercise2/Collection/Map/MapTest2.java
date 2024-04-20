@@ -47,7 +47,7 @@ public class MapTest2 {
         Set<String> keys=map.keySet();
         System.out.println(keys);
 
-        //将对应的值放在collection集合(collection包含两个类，可以对应到重复类的要求)中，这是由于值可能重复，因此选择使用collection没有定性要求
+        //将对应的值放在collection集合(collection为一个父类，方便)中，这是由于值可能重复，因此选择使用collection没有定性要求
         Collection<Integer> values=map.values();
         System.out.println(values);
 
