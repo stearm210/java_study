@@ -29,10 +29,10 @@ public class MapExample1 {
             //每次循环时询问map中是否存在这个景点
             if(result.containsKey(s)){
                 //说明这个景点之前统计过，值加一
-                result.put(s,result.get(s)+1);
+                result.put(s,result.get(s)+1);//这里put进去的值是键值对
             }else {
                 //说明景点第一次存入，景点+1
-                result.put(s,1);
+                result.put(s,1);//这里put进去的值是键值对
             }
         }
         System.out.println(result);
