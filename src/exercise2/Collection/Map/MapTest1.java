@@ -30,5 +30,6 @@ public class MapTest1 {
         map2.put(19,"李四");
         map2.put(20,"王五");
         System.out.println(map2);
+
     }
 }
