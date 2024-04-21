@@ -41,6 +41,9 @@ public class MapTest3 {
         }
 
         //3.Lambda表达式遍历方法
-
+        //使用forEach方法进行遍历更加方便
+        map.forEach((k,v)->{
+            System.out.println(k+"===>"+v);
+        });
     }
 }
