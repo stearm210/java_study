@@ -30,11 +30,29 @@ public class SteamTest2 {
         map.put("迪丽热巴",168.2);
         map.put("马尔扎哈",166.3);
         map.put("卡尔扎巴",189.9);
+        //但是，我们可以通过将map集合变成set集合的方式进行stream流调用
+        //这里将keys键用set集合进行调用
+        Set<String> keys=map.keySet();
+        Stream<String> ks = keys.stream();
+
+        //这里使用collection进行值的调用
+        Collection<Double> values=map.values();
+        Stream<Double> vs = values.stream();
+
+        //将map直接转为collection的方法
+        Set<Map.Entry<String,Double>> entries=map.entrySet();
+        Stream<Map.Entry<String, Double>> kvs = entries.stream();
+        //使用stream流
+        //filter进行过滤(内嵌条件)。contains表示包含某些数据
+        kvs.filter(e -> e.getKey().contains("巴")).forEach(e -> System.out.println(e.getKey()+ "--->" +e.getValue()));
+
 
         //获取数组的stream流
         String[] names2={"张来了","东方来了","唐就将","孤独看看"};
+        //方法一
+        Stream<String> s1 = Arrays.stream(names2);
 
-
-
+        //方法二
+        Stream<String> s2 = Stream.of(names2);
     }
 }

@@ -15,7 +15,9 @@
 
 
 Stream使用的步骤：
-1.获取数据源：比如说数组、集合等
+1.获取数据源：比如说数组、集合等。  一般来说，会使用collection中的list、set来获取，如果使用的是map，则需要使用entrySet()方法将其转换为set类型
+//例子：Set<Map.Entry<String,Double>> entries=map.entrySet(); 这里将一个map类型的数据转换为了一个set类型数据
+
 2.对这个数据源进行过滤、排序等操作
 3.将处理过后的数据进行去重、获取对应的结果
 
