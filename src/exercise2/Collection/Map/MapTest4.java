@@ -22,7 +22,10 @@ public class MapTest4 {
         List<String> cities2=new ArrayList<>();
         Collections.addAll(cities2,"武汉市","孝感市","十堰市","宜昌市");
         map.put("湖北省",cities2);
-        System.out.println(map);
 
+        List<String> cities3=new ArrayList<>();
+        Collections.addAll(cities3,"石家庄市","唐山市","保定市","邯郸市");
+        map.put("河北省",cities3);
+        System.out.println(map);
     }
 }
