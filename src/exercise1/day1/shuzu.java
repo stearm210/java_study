@@ -1,5 +1,7 @@
 package exercise1.day1;
 
+import java.util.Arrays;
+
 public class shuzu {
         public static void main(String[] args) {
             // 数组大小
@@ -23,6 +25,10 @@ public class shuzu {
             for (int i = 0; i < size; i++) {
                 total += myList[i];
             }
+
+            //数组输出的常用写法
+            System.out.println(Arrays.toString(myList));//数组输出的常用写法
+
             System.out.println("总和为： " + total);
         }
 }

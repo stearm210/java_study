@@ -3,7 +3,7 @@ package exercise2.Stream;
 import java.util.*;
 import java.util.stream.Stream;
 
-public class SteamTest2 {
+public class StreamTest2 {
     public static void main(String[] args) {
 
         //获取list集合的stream流
