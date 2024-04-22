@@ -1,4 +1,4 @@
-package exercise2.Collection.Map.TreeMap;
+package exercise2.Map.TreeMap;
 
 import java.util.Comparator;
 import java.util.Map;

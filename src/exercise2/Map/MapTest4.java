@@ -1,4 +1,4 @@
-package exercise2.Collection.Map;
+package exercise2.Map;
 
 
 //集合的嵌套
@@ -27,5 +27,12 @@ public class MapTest4 {
         Collections.addAll(cities3,"石家庄市","唐山市","保定市","邯郸市");
         map.put("河北省",cities3);
         System.out.println(map);
+
+
+        //如何获得键中对应的值？
+        List<String> cities=map.get("湖北省");
+        for (String city:cities){
+            System.out.println(city);
+        }
     }
 }
