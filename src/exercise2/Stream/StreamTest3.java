@@ -38,5 +38,13 @@ public class StreamTest3 {
         //这里直接进行排序，不需要filter进行条件限制
         System.out.println("-----------------------------------------");
         students.stream().sorted(((o1, o2) -> Double.compare(o2.getHeight(), o1.getHeight()))).skip(students.size()-2).forEach(System.out::println);
+
+
+        //找出升高超过168的学生，并且去重
+        //同样，这里使用.map方法获得上面升高大于168同学名字的一个遍历。也就是说，通过这个map方法获得一个向学生名字的转换
+        //这里使用.distinct方法进行去重
+        students.stream().filter(s -> s.getHeight()>168).map(s -> s.getName()).distinct().forEach(System.out::println);
+
+        //使用这个方法需要注意：distinct去重复，在自定义类型对象中(希望内容一样就认为重复，需要将hashCode，equals方法进行重写)
     }
 }
