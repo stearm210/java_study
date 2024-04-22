@@ -18,6 +18,11 @@ public class MapTest4 {
         //这里使用Collections类对集合进行操作，批量添加元素
         Collections.addAll(cities1,"南京市","扬州市","苏州市","无锡市","杭州市");
         map.put("江苏省",cities1);
+
+        List<String> cities2=new ArrayList<>();
+        Collections.addAll(cities2,"武汉市","孝感市","十堰市","宜昌市");
+        map.put("湖北省",cities2);
         System.out.println(map);
+
     }
 }
