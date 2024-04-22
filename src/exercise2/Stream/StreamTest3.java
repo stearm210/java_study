@@ -3,6 +3,8 @@ package exercise2.Stream;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Objects;
+import java.util.stream.Stream;
 
 public class StreamTest3 {
     public static void main(String[] args) {
@@ -46,5 +48,13 @@ public class StreamTest3 {
         students.stream().filter(s -> s.getHeight()>168).map(s -> s.getName()).distinct().forEach(System.out::println);
 
         //使用这个方法需要注意：distinct去重复，在自定义类型对象中(希望内容一样就认为重复，需要将hashCode，equals方法进行重写)
+
+
+        ///进行数据流的合并操作
+        Stream<String> st1=Stream.of("张三","李四");
+        Stream<String> st2=Stream.of("张三2","李四2","王五");
+        //这里需要使用object类型将合并之后的结果接住
+        Stream<Object> allSt=Stream.concat(st1,st2);
+        allSt.forEach(System.out::println);
     }
 }
