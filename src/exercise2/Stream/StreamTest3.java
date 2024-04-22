@@ -30,8 +30,13 @@ public class StreamTest3 {
         //找出升高降序排序的人
         //由于升高时double，因此需要调用double中的compare方法进行降序排序
         //这里加上limit(3)是将前面3个学生取出
-        students.stream().sorted((o1, o2) -> Double.compare(o2.getHeight(), -o1.getHeight())).limit(3).forEach(s-> System.out.println());
+        students.stream().sorted((o1, o2) -> Double.compare(o2.getHeight(), -o1.getHeight())).limit(3).forEach(s-> System.out.println(s));
 
 
+        //将升高最后两位的学生进行输出
+        //这里使用了skip跳过前面3个，直接会得到最后两个
+        //这里直接进行排序，不需要filter进行条件限制
+        System.out.println("-----------------------------------------");
+        students.stream().sorted(((o1, o2) -> Double.compare(o2.getHeight(), o1.getHeight()))).skip(students.size()-2).forEach(System.out::println);
     }
 }
