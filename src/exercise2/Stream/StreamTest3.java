@@ -49,7 +49,6 @@ public class StreamTest3 {
 
         //使用这个方法需要注意：distinct去重复，在自定义类型对象中(希望内容一样就认为重复，需要将hashCode，equals方法进行重写)
 
-
         ///进行数据流的合并操作
         Stream<String> st1=Stream.of("张三","李四");
         Stream<String> st2=Stream.of("张三2","李四2","王五");
