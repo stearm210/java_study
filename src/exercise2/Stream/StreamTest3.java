@@ -14,6 +14,7 @@ public class StreamTest3 {
         //filter中的方法是使得scores中的数据大于60。之后再调用sorted方法进行升序排序。再调用forEach进行循环输出
         scores.stream().filter(s -> s>=60).sorted().forEach(s -> System.out.println(s));
 
+
         List<Student> students=new ArrayList<>();
         Student s1=new Student("蜘蛛精",26,172.5);
         Student s2=new Student("蜘蛛精",26,172.5);
