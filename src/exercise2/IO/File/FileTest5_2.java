@@ -12,4 +12,13 @@ public class FileTest5_2 {
             return f(n-1)*n;
         }
     }
+
+    //递加算法
+    public static int f2(int x){
+        if (x == 1) {
+            return 1;
+        }else {
+            return f2(x-1)+x;
+        }
+    }
 }
