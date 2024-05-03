@@ -10,11 +10,14 @@ public class FileTest6 {
     }
 
     //文件搜索
-    /*
-    * 去目录下搜索某个文件
-    * dir 为目录
-    * filename 为文件名
-    * */
+    /**
+     * @Description:
+     * @param dir
+     * @param fileName
+     * @return void
+     * @Author: 你的名字
+     * @Date: 3/5/2024 20:10
+     */
     public static void searchFile(File dir,String fileName) throws IOException {
         //1.非法情况拦截
         if (dir == null || !dir.exists() || dir.isFile()){
