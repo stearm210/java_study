@@ -1,10 +1,11 @@
 package exercise2.IO.File;
 
 import java.io.File;
+import java.io.IOException;
 
 //文件搜索案例
 public class FileTest6 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         searchFile(new File("D:/"),"steam");
     }
 
@@ -14,7 +15,7 @@ public class FileTest6 {
     * dir 为目录
     * filename 为文件名
     * */
-    public static void searchFile(File dir,String fileName){
+    public static void searchFile(File dir,String fileName) throws IOException {
         //1.非法情况拦截
         if (dir == null || !dir.exists() || dir.isFile()){
             return;//代表无法搜索
@@ -32,6 +33,9 @@ public class FileTest6 {
                     //是文件，判断是否是我们想找的文件
                     if(f.getName().contains(fileName)){
                         System.out.println("找到"+f.getAbsolutePath());//输出绝对路径
+                        //如果想启动就可以调这个启动文件
+                        //Runtime runtime=Runtime.getRuntime();
+                        //runtime.exec(f.getAbsolutePath());
                     }else {
                         //是文件夹,重复这个过程
                         searchFile(f,fileName);
