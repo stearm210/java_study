@@ -12,11 +12,8 @@ public class FileTest6 {
     //文件搜索
     /**
      * @Description:
-     * @param dir
-     * @param fileName
-     * @return void
-     * @Author: 你的名字
-     * @Date: 3/5/2024 20:10
+     * @param dir 文件
+     * @param fileName 想查找的文件名
      */
     public static void searchFile(File dir,String fileName) throws IOException {
         //1.非法情况拦截
