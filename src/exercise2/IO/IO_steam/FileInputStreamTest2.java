@@ -4,6 +4,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+//使用FileInputStream每次读取多个字节，读取性能得到了提升，但是读取汉字还是会出现乱码
 /**
  * @Author：stearm210
  * @Package：exercise2.IO.IO_steam
