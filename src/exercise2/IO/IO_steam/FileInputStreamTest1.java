@@ -21,8 +21,19 @@ public class FileInputStreamTest1 {
         //2.读取文件的字节数据
         int b1=is.read();
         System.out.println((char)b1);
-
         int b2=is.read();
         System.out.println((char)b2);
+
+        //可以使用循环改造上面代码
+        int b;//用于记录读取的字节
+        //当字符不为空时，即不等于-1时，可以进行循环
+        while((b=is.read()) != -1){
+            System.out.print((char) b);
+            //这里可以删除println中的ln使得输出保持一行而不是一列
+        }
+
+        //FileInputStream读取汉字是会乱码的，无法避免
+        //使用IO流完毕之后必须关闭，释放系统资源
+        is.close();
     }
 }
