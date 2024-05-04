@@ -36,8 +36,12 @@ public class FileInputStreamTest2 {
         byte[] buffer1=new byte[3];
         int len1;//记住每次读取了多少个字节
         while((len1=is.read(buffer1)) != -1){
+            //将字节变成string类型
             String rs1 = new String(buffer1, 0, len1);
             System.out.print(rs1);//不需要换行
         }
+
+        //性能提升
+        is.close();
     }
 }
