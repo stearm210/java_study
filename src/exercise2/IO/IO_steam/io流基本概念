@@ -4,7 +4,8 @@
 4.字符输出流：内存中的数据以字符的形式写到磁盘文件或者网络中去
 
 
-字节输入流：InputStream
-字节输出流：OutputStream
-字符输入流：Reader
-字符输出流：Writer
+字节输入流：InputStream  实现类：FileInputStream
+字节输出流：OutputStream 实现类：FileOutputSteam
+字符输入流：Reader       实现类：FileReader
+字符输出流：Writer       实现类：FileWriter
+都是抽象类,必须有实现类来实现
