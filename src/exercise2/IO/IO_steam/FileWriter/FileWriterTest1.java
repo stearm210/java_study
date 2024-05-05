@@ -4,6 +4,11 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Writer;
 
+
+//注意，写数据的时候一般要写刷新流或者关闭流。
+//刷新流的作用是将写入到文件中的数据刷新显示到文件中。
+//关闭流中是包含着刷新流的。但是，一旦将流关闭
+//就不能再使用流了。
 /**
  * @Author：stearm210
  * @Package：exercise2.IO.IO_steam.FileWriter
