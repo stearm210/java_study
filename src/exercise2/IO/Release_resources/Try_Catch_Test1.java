@@ -15,10 +15,24 @@ public class Try_Catch_Test1 {
     public static void main(String[] args) {
         try{
             System.out.println(10/2);
+            return;//跳出方法的执行
         }catch (Exception e){
             e.printStackTrace();
         }finally {
             System.out.println("finally执行了一次");
+        }
+
+        System.out.println(chu(10,2));
+    }
+    public static int chu(int a,int b){
+        try {
+            return a/b;
+        }catch (Exception e){
+            e.printStackTrace();
+            return -1;//表示出现异常
+        }finally {
+            //千万不要在finally中返回数据
+            //这样会导致返回的数据是不准确的
         }
     }
 }
