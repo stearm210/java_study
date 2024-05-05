@@ -18,11 +18,21 @@ import java.io.IOException;
 public class FileOutputStreamTest1 {
     public static void main(String[] args) throws IOException {
         //1.创建字节输出流管道
-        FileOutputStream os = new FileOutputStream("D:\\java study\\IDEApro code\\study\\src\\exercise2\\IO\\IO_steam\\itheima04.txt");
+        //这是一个覆盖管道，主要会覆盖之前的数据
+//        FileOutputStream os = new FileOutputStream("D:\\java study\\IDEApro code\\study\\src\\exercise2\\IO\\IO_steam\\itheima04.txt");
+
+        //下面这个是可以在后面进行追加数据的管道
+        FileOutputStream os = new FileOutputStream("D:\\java study\\IDEApro code\\study\\src\\exercise2\\IO\\IO_steam\\itheima04.txt",true);
 
         //2.开始写对应的字节出去
+        byte[] bytes="xxxx".getBytes();
+        os.write(bytes,0,2);
         os.write(97);
         os.write('b');
+
+        //进行换行
+        os.write("\r\n".getBytes());
+
         os.close();
     }
 }
