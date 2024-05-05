@@ -1,7 +1,7 @@
 package exercise2.IO.Release_resources;
 
 //专业的程序，不要运行此程序
-
+//finally代码区的特点：无论try中的程序是否正常执行，还是出现异常，最后一定会执行finally区代码，除非虚拟机终止。
 import java.io.*;
 
 /**
