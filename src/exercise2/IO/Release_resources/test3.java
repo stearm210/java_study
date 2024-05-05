@@ -1,7 +1,8 @@
 package exercise2.IO.Release_resources;
 
-//新的资源释放方法
-
+//新的资源释放方法，会自动调用释放资源的方法
+//将需要创建的管道、输入输出流放到try中的括号里面
+//将需要运行的代码放在try的中括号里面。
 import java.io.*;
 
 /**
