@@ -15,7 +15,8 @@ import java.io.Writer;
 public class FileWriterTest1 {
     public static void main(String[] args) {
         //创建一个管道
-        try (Writer fw=new FileWriter("D:\\java study\\IDEApro code\\study\\src\\exercise2\\IO\\IO_steam\\itheima06.txt");){
+        //后面加上一个参数true，变为可以追加数据的管道
+        try (Writer fw=new FileWriter("D:\\java study\\IDEApro code\\study\\src\\exercise2\\IO\\IO_steam\\itheima06.txt",true);){
             //写入数据
             fw.write('9');
             fw.write(97);
