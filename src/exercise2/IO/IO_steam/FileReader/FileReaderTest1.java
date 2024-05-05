@@ -30,6 +30,15 @@ public class FileReaderTest1 {
             while ((c=fr.read()) != -1){
                 System.out.print((char) c);
             }
+
+            //一般会使用字符数组进行操作
+            char [] buffer=new char[3];
+            int len;//记住每次读取了多少个字符
+            while ((len=fr.read(buffer)) != -1){
+                //读多少写出多少
+                System.out.println(new String(buffer, 0, len));
+            }
+
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
