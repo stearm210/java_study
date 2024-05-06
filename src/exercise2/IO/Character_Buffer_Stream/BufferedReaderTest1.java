@@ -15,7 +15,7 @@ public class BufferedReaderTest1 {
         try (
                 Reader fr=new FileReader("D:\\java study\\IDEApro code\\study\\src\\exercise2\\IO\\IO_steam\\itheima05.txt");
 
-                //创建一个字符缓冲输入流进行输入流的包装
+                //创建一个字符缓冲输入流进行输入流的包装,这样做的目的是为了提高性能
                 BufferedReader br = new BufferedReader(fr);
         ) {
             char[] buffer=new char[3];
