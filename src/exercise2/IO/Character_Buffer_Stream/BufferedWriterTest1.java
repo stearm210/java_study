@@ -1,5 +1,6 @@
 package exercise2.IO.Character_Buffer_Stream;
 
+import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.Writer;
 
@@ -14,12 +15,16 @@ import java.io.Writer;
 public class BufferedWriterTest1 {
     public static void main(String[] args) {
         try (
+                //这里后面加上一个true是为了可以使得写入的字符挂在以写入文件后面
                 Writer fw=new FileWriter("D:\\java study\\IDEApro code\\study\\src\\exercise2\\IO\\IO_steam\\itheima08.txt",true);
+
+                //创建字符缓冲输出流进行性能优化
+                BufferedWriter bw = new BufferedWriter(fw);
                 ){
-            fw.write('a');
-            fw.write("9");
-            fw.write("对对对");
-            fw.write("\r\n");
+            bw.write('a');
+            bw.write("9");
+            bw.write("对对对");
+            bw.write("\r\n");
         }catch (Exception e){
             e.printStackTrace();
         }
