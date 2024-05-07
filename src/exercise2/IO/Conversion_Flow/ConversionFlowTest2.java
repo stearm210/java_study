@@ -20,8 +20,11 @@ public class ConversionFlowTest2 {
                 InputStream is=new FileInputStream("D:\\java study\\IDEApro code\\study\\src\\exercise2\\IO\\IO_steam\\itheima08.txt");
 
                 //2.原始的字节输入流转换成想要的文本信息，转换为最终的字符输入流
+                //原本输入的文本字符就是GBK，这里还是需要转换一下更好。
                 InputStreamReader isr = new InputStreamReader(is,"GBK");
 
+                //3.把字符输入流包装成缓冲字符输入流
+                BufferedReader br = new BufferedReader(isr);
         ){
             String line;//记录读取的行数
             while ((line=br.readLine()) != null){
