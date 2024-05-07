@@ -1,7 +1,8 @@
 package exercise2.IO.Character_Buffer_Stream;
 
 //这个案例是不能运行的，注意
-//这个案例是一个文本文件（里面有许多文字），这些文字被分割成多段，这个代码的作用是将这些文字进行排序之后拼接到一起。
+//这个案例是一个文本文件（里面有许多文字），这些文字被分割成多段，这个代码的作用是将这些文字进行排序之后拼接到一起。形成一段文本文字输出到其余文件中
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileReader;
@@ -25,6 +26,8 @@ public class example {
 
                 BufferedWriter bw=new BufferedWriter(new FileWriter("D:\\java study\\IDEApro code\\study\\src\\exercise2\\IO\\IO_steam\\itheima02.txt"));
         ) {
+
+            //这里使用一个list集合将文件中的文字放入list集合中，方便后面进行读取。
             List<String> data = new ArrayList<>();
             String line;
             while ((line = br.readLine()) != null) {
@@ -40,6 +43,7 @@ public class example {
             }
         }catch (Exception e){
             e.printStackTrace();
+
         }
     }
 }
