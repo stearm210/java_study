@@ -1,8 +1,6 @@
 package exercise2.IO.Conversion_Flow;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.Reader;
+import java.io.*;
 
 //InputStreamReader(字符输入转换流)
 //这种办法是解决字符乱码问题的，先获取文件原始的字节流，之后将其按照对应的字符集编码转换为字符输入流
@@ -16,12 +14,14 @@ import java.io.Reader;
  */
 public class ConversionFlowTest2 {
     public static void main(String[] args) {
-        //1.创建一个文件字符输入流与源文件接通
-        //代码编码为UTF-8    文件的编码为jbk时
+
         try (
-                Reader fr=new FileReader("D:\\java study\\IDEApro code\\study\\src\\exercise2\\IO\\IO_steam\\itheima08.txt");
-                //2.这里将文件字符输入流包装成缓冲字符输入流,提高性能
-                BufferedReader br=new BufferedReader(fr);
+                //1.得到文件的原始字节流
+                InputStream is=new FileInputStream("D:\\java study\\IDEApro code\\study\\src\\exercise2\\IO\\IO_steam\\itheima08.txt");
+
+                //2.原始的字节输入流转换成想要的文本信息，转换为最终的字符输入流
+                InputStreamReader isr = new InputStreamReader(is,"GBK");
+
         ){
             String line;//记录读取的行数
             while ((line=br.readLine()) != null){
