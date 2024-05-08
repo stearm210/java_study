@@ -1,4 +1,4 @@
-package exercise2.IO.Print_Stream;
+package exercise2.IO.Print_Steam;
 
 
 //执行打印流的方法
