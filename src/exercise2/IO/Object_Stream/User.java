@@ -1,5 +1,9 @@
 package exercise2.IO.Object_Stream;
 
+//对象如果想进行序列化，就必须实现一个序列化接口
+
+import java.io.Serializable;
+
 /**
  * @Author：stearm210
  * @Package：exercise2.IO.Object_Stream
@@ -8,7 +12,9 @@ package exercise2.IO.Object_Stream;
  * @Date：8/5/2024 20:56
  * @Filename：User
  */
-public class User {
+
+//实现一个序列化接口:Serializable
+public class User implements Serializable {
     private String loginName;
     private String userName;
 
