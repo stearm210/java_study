@@ -1,4 +1,4 @@
-package exercise2.IO.Print_Steam;
+package exercise2.IO.Print_Stream;
 
 import java.io.PrintStream;
 

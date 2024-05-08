@@ -1,9 +1,8 @@
-package exercise2.IO.IO_steam.FileReader;
+package exercise2.IO.IO_Stream.FileReader;
 
 
 //使用文件字符输入流一般会多用于读写txt文件方便
 
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;

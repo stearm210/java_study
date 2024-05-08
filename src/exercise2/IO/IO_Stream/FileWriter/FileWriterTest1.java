@@ -1,4 +1,4 @@
-package exercise2.IO.IO_steam.FileWriter;
+package exercise2.IO.IO_Stream.FileWriter;
 
 import java.io.FileWriter;
 import java.io.IOException;

@@ -1,6 +1,5 @@
-package exercise2.IO.IO_steam.FileOutputStream;
+package exercise2.IO.IO_Stream.FileOutputStream;
 
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 

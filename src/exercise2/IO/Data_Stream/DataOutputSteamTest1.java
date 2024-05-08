@@ -1,7 +1,6 @@
-package exercise2.IO.Data_Steam;
+package exercise2.IO.Data_Stream;
 
 import java.io.DataOutputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 
 /**
@@ -12,7 +11,7 @@ import java.io.FileOutputStream;
  * @Date：8/5/2024 20:22
  * @Filename：DataSteamTest1
  */
-public class DataSteamTest1 {
+public class DataOutputSteamTest1 {
     public static void main(String[] args) {
         try (
                 //1.包装一个低级的数据输出流
@@ -21,7 +20,8 @@ public class DataSteamTest1 {
             dos.write(97);
             dos.writeDouble(99.5);
             dos.writeBoolean(true);
-            dos.writeUTF("哈哈哈哈哈9999！");
+            dos.writeUTF("哈哈哈哈哈9999");
+
         } catch (Exception e) {
             e.printStackTrace();
         }

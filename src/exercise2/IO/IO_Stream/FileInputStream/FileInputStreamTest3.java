@@ -1,4 +1,4 @@
-package exercise2.IO.IO_steam.FileInputStream;
+package exercise2.IO.IO_Stream.FileInputStream;
 
 import java.io.*;
 
