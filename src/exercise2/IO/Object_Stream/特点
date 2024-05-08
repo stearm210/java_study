@@ -1,0 +1,5 @@
+ObjectOutputStream对象字节输出流：将java对象序列化
+，主要是将java对象存入文件中
+
+
+
