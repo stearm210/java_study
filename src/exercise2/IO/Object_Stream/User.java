@@ -28,6 +28,7 @@ public class User implements Serializable {
         this.passWord = passWord;
     }
 
+    //如果再变量之前加上transient，这会使得这个变量不会参加序列化
     private int age;
     private String passWord;
 
