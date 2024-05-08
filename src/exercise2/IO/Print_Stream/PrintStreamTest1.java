@@ -2,6 +2,7 @@ package exercise2.IO.Print_Stream;
 
 
 //执行打印流的方法
+//内部集成了一个缓冲流
 
 import java.io.PrintStream;
 public class PrintStreamTest1 {
