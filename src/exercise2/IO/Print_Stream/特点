@@ -1,1 +1,6 @@
 高效的打印数据
+
+PrintStream继承至outputstream，支持写字节数据的方法
+PrintWriter继承自字符输出流Writer，因此支持写字符数据出去
+
+
