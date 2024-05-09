@@ -15,6 +15,7 @@ import java.util.Properties;
 public class PropertiesTest2 {
     public static void main(String[] args) throws IOException {
         //1.创建Properties对象，用它存储一些键值对数据
+        //写入一些文字
         Properties properties=new Properties();
         properties.setProperty("张无忌","minmin");
         properties.setProperty("哈哈哈","ooo");
