@@ -1,5 +1,6 @@
 package exercise2.Special_File.XML;
 
+import org.dom4j.Attribute;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.Element;
@@ -45,7 +46,24 @@ public class XMLTest1 {
         Element user=root.element("user");
         System.out.println("获取第一个子标签（元素）中name标签中的值："+user.elementText("name"));
 
-        //6.获取元素的属性信息
+        //6.获取元素的属性信息,默认第一个子标签（元素）
         System.out.println("获取元素的属性信息："+user.attributeValue("id"));
+        Attribute id = user.attribute("id");//将第一个子标签（元素）赋值为id
+        System.out.println("第一个子标签中的name标签中的值"+id.getName());//
+        System.out.println("第一个子标签的属性值"+id.getValue());
+
+        //通过标签值获取对应的标签下的值
+        List<Attribute> attributes = user.attributes();//这里用一个list进行存储
+        for (Attribute attribute : attributes) {
+            System.out.println(attribute.getName()+"="+attribute.getValue());
+        }
+
+        //7.获取全部的文本内容
+        //获取当前标签下的子标签中的值
+        //这里默认第一个子标签
+        System.out.println(user.elementText("name"));
+        System.out.println(user.elementText("地址"));
+        System.out.println(user.elementText("password"));
+
     }
 }
