@@ -28,6 +28,7 @@ public class PropertiesTest1 {
         System.out.println(properties.getProperty("张无忌"));
 
         //4.遍历全部的键和值
+        //先得到键，然后再通过键得到value
         Set<String> keys = properties.stringPropertyNames();
         for (String key : keys) {
             String value= properties.getProperty(key);
