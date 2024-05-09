@@ -3,6 +3,7 @@ package exercise2.Special_File.Properties;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.Properties;
+import java.util.Set;
 
 /**
  * @Author：stearm210
@@ -22,6 +23,15 @@ public class PropertiesTest1 {
         properties.load(new FileReader("D:\\java study\\IDEApro code\\study\\src\\users.properties"));
         System.out.println(properties);
 
+        //3.打印对应的键值数据 getProperty
+        System.out.println(properties.getProperty("赵敏"));
+        System.out.println(properties.getProperty("张无忌"));
 
+        //4.遍历全部的键和值
+        Set<String> keys = properties.stringPropertyNames();
+        for (String key : keys) {
+            String value= properties.getProperty(key);
+            System.out.println(key+"----"+value);
+        }
     }
 }
