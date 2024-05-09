@@ -14,6 +14,7 @@
         <sex>女</sex>
         <地址>光明顶</地址>
         <password>wuji</password>
+        <data> 3 &lt; 2 &amp;&amp; 5>4 </data>
     </user>
 </users>
 
