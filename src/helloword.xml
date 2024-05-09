@@ -7,6 +7,7 @@
         <sex>男</sex>
         <地址>光明顶</地址>
         <password>minmin</password>
+        <data>3 &lt; 2 &amp;&amp; 5>4 </data>
     </user>
     <user id="2">
         <name>音影</name>
