@@ -1,0 +1,4 @@
+2024-05-10 16:01:21.276 [main] INFO  LogBackTest1-chu方法开始执行~~~
+2024-05-10 16:01:21.283 [main] DEBUG LogBackTest1-参数a:18
+2024-05-10 16:01:21.284 [main] DEBUG LogBackTest1-参数b:0
+2024-05-10 16:01:21.285 [main] ERROR LogBackTest1-chu方法执行失败,出现bug~~~

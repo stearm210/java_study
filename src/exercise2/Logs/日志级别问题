@@ -1,0 +1,8 @@
+<root level="info">
+    <appender-ref ref="CONSOLE"/>
+    <appender-ref ref="FILE" />
+</root>
+
+只有日志级别大于或者等于核心配置文件的日志级别时
+，才会被记录，否则不会被记录。
+
