@@ -14,11 +14,12 @@ package exercise3.Multithreading;
 * */
 public class MyThread extends Thread{
     //2.必须重写Thread类中的run方法
+    //注意，主线程执行start方法之后，子线程这里也会执行这个run方法
     @Override
     public void run(){
         //描述线程的执行任务
         for (int i = 0; i <= 5; i++) {
-            System.out.println("MyThread线程输出:"+i);
+            System.out.println("子线程MyThread输出:"+i);
         }
     }
 }
