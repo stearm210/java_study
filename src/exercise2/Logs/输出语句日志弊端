@@ -4,3 +4,10 @@
 
 日志框架一般使用LogBack框架。
 
+
+//如何使用框架？
+1。导入logback框架
+2.将logback文件中的核心配置文件logback.xml拷贝到src目录下
+
+
+
