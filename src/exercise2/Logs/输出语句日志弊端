@@ -8,6 +8,7 @@
 //如何使用框架？
 1。导入logback框架
 2.将logback文件中的核心配置文件logback.xml拷贝到src目录下
-
+3.创建logback框架提供的logger对象，之后使用logger对象
+调用其提供的方法就可以记录系统的日志信息。
 
 
