@@ -20,6 +20,7 @@ public class MyThread extends Thread{
         //描述线程的执行任务
         for (int i = 0; i <= 5; i++) {
             System.out.println("子线程MyThread输出:"+i);
+
         }
     }
 }
