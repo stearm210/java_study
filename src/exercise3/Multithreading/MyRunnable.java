@@ -1,5 +1,21 @@
 package exercise3.Multithreading;
 
+/*
+* Runnable主要实现过程
+* 1.定义一个线程任务类MyRunnable实现Runnable接口，重写run方法
+* 2.创建MyRunnable任务对象
+* 3.将MyRunnable任务对象交给Thread处理
+* 4.使用start()启动线程
+* */
+
+
+
+
+
+
+
+
+
 /**
  * @Author：stearm210
  * @Package：exercise3.Multithreading
