@@ -4,9 +4,8 @@ package exercise3.Multithreading;
 //多线程的创建方式一：继承Thread类
 //1.定义一个子类MyThread继承线程类，重写run()方法
 //2.创建MyThread类对象
-//3.调用线程对象的start()方法启动线程
-
-
+//3.调用线程对象的start()方法启动线程。这时的多线程就相当于
+//main主线程+调用的子线程
 
 /**
  * @Author：stearm210
