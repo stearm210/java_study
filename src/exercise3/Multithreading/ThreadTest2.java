@@ -18,6 +18,14 @@ package exercise3.Multithreading;
  */
 public class ThreadTest2 {
     public static void main(String[] args) {
+        //3.创建任务对象,创建一个新的myrunnable对象
+        Runnable target=new MyRunnable();
 
+        //4.将任务对象交给一个线程对象进行处理。转化为一个线程，方便调用start方法，对任务进行调用
+        new Thread(target).start();
+
+        for (int i = 0; i <=5; i++) {
+            System.out.println("主线程main输出==="+i);
+        }
     }
 }
