@@ -25,7 +25,6 @@ public class ThreadTest3 {
         //5.将任务对象交给一个线程Thread对象
         new Thread(fl).start();
 
-
         //6.获取线程执行完毕之后的返回结果
         String rs=fl.get();
         System.out.println(rs);
