@@ -17,6 +17,7 @@ public class ThreadTest1 {
         //4.启动线程(自动执行)
         t.start();//main线程，t线程
 
+        //这里是主线程的一个输出
         for (int i = 0; i <=5; i++) {
             System.out.println("主线程main输出:"+i);
         }
