@@ -1,6 +1,13 @@
 package exercise3.Multithreading;
 //线程创建方法，这种方式主要是通过继承Tread类进行创建
 
+//多线程的创建方式一：继承Thread类
+//1.定义一个子类MyThread继承线程类，重写run()方法
+//2.创建MyThread类对象
+//3.调用线程对象的start()方法启动线程
+
+
+
 /**
  * @Author：stearm210
  * @Package：exercise3.Multithreading
