@@ -13,5 +13,7 @@ public class ThreadTest {
         //1.创建一个账户对象，代表两个人的共享账户
         Account acc=new Account("ICBC-110",100000);
 
+        //2.创建两个线程分别表示小明和小红，方便表示取钱操作
+
     }
 }
