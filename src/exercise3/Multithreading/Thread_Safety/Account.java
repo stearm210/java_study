@@ -25,7 +25,12 @@ public class Account {
         this.money = money;
     }
 
-    public double getMoney() {
+    //小明小红会同时过来取钱
+    public void drawMoney(double money){
+        //先搞清楚是谁来取钱
+
+    }
+    public double getMoney(int i) {
         return money;
     }
 
