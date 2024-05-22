@@ -20,9 +20,9 @@ public class Account {
     public Account() {
     }
 
-    public Account(double money, String cardId) {
-        this.money = money;
+    public Account(String cardId,double money) {
         this.cardId = cardId;
+        this.money = money;
     }
 
     public double getMoney() {

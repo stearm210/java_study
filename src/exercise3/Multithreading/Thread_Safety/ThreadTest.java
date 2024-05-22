@@ -10,6 +10,8 @@ package exercise3.Multithreading.Thread_Safety;
  */
 public class ThreadTest {
     public static void main(String[] args) {
+        //1.创建一个账户对象，代表两个人的共享账户
+        Account acc=new Account("ICBC-110",100000);
 
     }
 }
