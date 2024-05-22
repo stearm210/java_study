@@ -26,7 +26,8 @@ public class Account {
     }
 
     //小明小红会同时过来取钱
-    public void drawMoney(double money){
+    //使用同步方法进行加锁操作，保证线程同步、线程安全
+    public synchronized void drawMoney(double money){
         //先搞清楚是谁来取钱
         String name=Thread.currentThread().getName();
         //判断余额是否足够
