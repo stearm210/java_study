@@ -33,6 +33,8 @@ public class Account {
         //判断余额是否足够
         if(this.money>=money){
             System.out.println(name+"来取钱"+money+"成功");
+            this.money-=money;
+            System.out.println(name+"取钱后余额为"+this.money);
         }else {
             System.out.println("余额不足");
         }
