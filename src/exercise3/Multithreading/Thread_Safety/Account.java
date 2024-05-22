@@ -29,7 +29,6 @@ public class Account {
     public void drawMoney(double money){
         //先搞清楚是谁来取钱
         String name=Thread.currentThread().getName();
-
         //判断余额是否足够
         if(this.money>=money){
             System.out.println(name+"来取钱"+money+"成功");

@@ -1,5 +1,9 @@
 package exercise3.Multithreading.Thread_Safety;
 
+/*
+* 1.线程安全问题：主要发生在同时对某个账户进行操作时
+* 2.一般来说，可能某个账户中的余额会因此出现差错*/
+
 /**
  * @Author：stearm210
  * @Package：exercise3.Multithreading.Thread_Safety
