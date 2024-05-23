@@ -20,8 +20,9 @@ public class Account {
     private double money;//余额
     private String cardId;//卡号
 
-    //
-    private Lock lk=new ReentrantLock();
+    //创建一个lock锁对象
+    //加上一个final防止被修改
+    private final Lock lk=new ReentrantLock();
 
     public Account() {
     }
@@ -35,14 +36,26 @@ public class Account {
     public void drawMoney(double money){
         //先搞清楚是谁来取钱
         String name=Thread.currentThread().getName();
+
+        //在这里进行加锁操作，多个线程过来时，只允许一个线程进行操作
+        lk.lock();
+
         //判断余额是否足够
-        if(this.money>=money){
-            System.out.println(name+"来取钱"+money+"成功");
-            this.money-=money;
-            System.out.println(name+"取钱后余额为"+this.money);
-        }else {
-            System.out.println("余额不足");
+        try {
+            if(this.money>=money){
+                System.out.println(name+"来取钱"+money+"成功");
+                this.money-=money;
+                System.out.println(name+"取钱后余额为"+this.money);
+            }else {
+                System.out.println("余额不足");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            //当一个线程操作完成之后，进行解锁操作
+            lk.unlock();
         }
+
 
     }
     public double getMoney(int i) {
