@@ -1,4 +1,4 @@
-package exercise3.Multithreading.Thread_Synchronization.Synchronization_Method;
+package exercise3.Multithreading.Thread_Synchronization.Lock;
 
 /*
 * 账户中有10万元，模拟当有两个人同时取钱时的账户安全问题
@@ -20,7 +20,8 @@ public class Account {
     private double money;//余额
     private String cardId;//卡号
 
-
+    //
+    private Lock lk=new ReentrantLock();
 
     public Account() {
     }
@@ -31,9 +32,7 @@ public class Account {
     }
 
     //小明小红会同时过来取钱
-    //使用同步方法进行加锁操作，保证线程同步、线程安全
-    //同步方法拥有底层的隐式锁对象问题，只是锁的范围是整个代码
-    public synchronized void drawMoney(double money){
+    public void drawMoney(double money){
         //先搞清楚是谁来取钱
         String name=Thread.currentThread().getName();
         //判断余额是否足够
