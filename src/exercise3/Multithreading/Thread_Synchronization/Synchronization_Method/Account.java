@@ -33,6 +33,7 @@ public class Account {
     //小明小红会同时过来取钱
     //使用同步方法进行加锁操作，保证线程同步、线程安全
     //同步方法拥有底层的隐式锁对象问题，只是锁的范围是整个代码
+    //这里的加锁操作放在函数上进行，也就是说将"synchronized"放在函数上进行操作
     public synchronized void drawMoney(double money){
         //先搞清楚是谁来取钱
         String name=Thread.currentThread().getName();
