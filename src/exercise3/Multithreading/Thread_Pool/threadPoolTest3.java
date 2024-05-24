@@ -22,5 +22,7 @@ public class threadPoolTest3 {
         //线程个数如何选择
         //1.计算密集型任务：核心线程数=CPU核数+1
         //2.IO密集型任务：核心线程数=CPU核数*2
+
+
     }
 }
