@@ -45,6 +45,8 @@ public class Client {
             }
 
             byte[] bytes = msg.getBytes();
+
+            //这里创建了一个数据包，并且给了这个数据包端口，也就是客户端的端口。注意，客户端的端口不能一样，一个客户端只能有一个端口
             DatagramPacket packet=new DatagramPacket(bytes,bytes.length, InetAddress.getLocalHost(),6666);
 
             //3.开始正式发送信息
