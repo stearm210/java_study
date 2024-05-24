@@ -1,4 +1,4 @@
-package exercise3.Network_Programming.UDP;
+package exercise3.Network_Programming.UDP.One;
 
 
 //创建一个服务端进行数据的接收服务等
@@ -6,8 +6,6 @@ package exercise3.Network_Programming.UDP;
 import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
-import java.net.SocketException;
-import java.util.Date;
 
 /**
  * @Author：stearm210
