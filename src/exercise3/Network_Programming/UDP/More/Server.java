@@ -27,16 +27,20 @@ public class Server {
         byte[] buffer=new byte[1024*64];
         DatagramPacket packet=new DatagramPacket(buffer,buffer.length);
 
-        //3.使用数据包对数据进行接收
-        socket.receive(packet);
+        while (true) {
+            //3.使用数据包对数据进行接收
+            socket.receive(packet);
 
-        //4.从字节数组中将接收的数据直接打印出来
-        //实现获取多少就输出多少
-        int len=packet.getLength();
-        String rs = new String(buffer,0,len);
-        System.out.println(rs);
+            //4.从字节数组中将接收的数据直接打印出来
+            //实现获取多少就输出多少
+            int len=packet.getLength();
+            String rs = new String(buffer,0,len);
+            System.out.println(rs);
 
+            System.out.println(packet.getAddress().getHostAddress());
+            System.out.println(packet.getPort());
 
-        socket.close();//释放资源
+            socket.close();//释放资源
+        }
     }
 }

@@ -6,6 +6,7 @@ package exercise3.Network_Programming.UDP.More;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
+import java.util.Scanner;
 
 /**
  * @Author：stearm210
@@ -26,13 +27,31 @@ public class Client {
         //参数二：发出去的数据大小(字节个数)
         //参数三：服务端的IP地址
         //参数四：服务端程序的端口
-        byte[] bytes="这是一个封装之后需要发出去的信息".getBytes();
-        DatagramPacket packet=new DatagramPacket(bytes,bytes.length, InetAddress.getLocalHost(),6666);
 
-        //3.开始正式发送信息
-        socket.send(packet);
-        System.out.println("客户端数据发送完毕");
-        //释放系统资源
-        socket.close();
+        //封装到一个死循环里面，实现消息的循环发送
+        //这里使用一个扫描器，用户输入什么数据，就将数据进行发送
+        Scanner sc=new Scanner(System.in);
+        while (true) {
+            System.out.println("请说:");
+
+            //得到用户输入的数据，并将这个数据进行打包，放入bytes数组中
+            String msg = sc.nextLine();
+
+            //一旦发现用户输入的exit数据，就退出客户端
+            if ("exit".equals(msg)){
+                System.out.println("退出循环");
+                socket.close();//释放资源
+                break;//跳出循环
+            }
+
+            byte[] bytes = msg.getBytes();
+            DatagramPacket packet=new DatagramPacket(bytes,bytes.length, InetAddress.getLocalHost(),6666);
+
+            //3.开始正式发送信息
+            socket.send(packet);
+        }
+
+
+        //System.out.println("客户端数据发送完毕");
     }
 }
