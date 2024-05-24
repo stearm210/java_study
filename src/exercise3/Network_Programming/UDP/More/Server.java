@@ -39,8 +39,7 @@ public class Server {
 
             System.out.println(packet.getAddress().getHostAddress());
             System.out.println(packet.getPort());
-
-            socket.close();//释放资源
+            System.out.println("收到消息--------------------");
         }
     }
 }
