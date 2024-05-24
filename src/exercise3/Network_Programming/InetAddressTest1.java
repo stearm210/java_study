@@ -14,7 +14,7 @@ import java.net.UnknownHostException;
  */
 public class InetAddressTest1 {
     public static void main(String[] args) throws IOException {
-        //1.获取本机ip地址对象
+        //1.获取本机ip地址对象，使用localhost对象。创建一个对象
         InetAddress ip1=InetAddress.getLocalHost();
 
         //输出ip具体信息
