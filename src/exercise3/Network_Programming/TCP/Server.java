@@ -1,5 +1,8 @@
 package exercise3.Network_Programming.TCP;
 
+/*
+* 服务端的开发一般使用serversocket包进行*/
+
 /**
  * @Author：stearm210
  * @Package：exercise3.Network_Programming.TCP

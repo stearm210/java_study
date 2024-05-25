@@ -7,6 +7,7 @@ import java.net.Socket;
 
 /*
 * TCP通信一般使用以下方式
+* 客户端的开发使用socket包进行
 * */
 
 
