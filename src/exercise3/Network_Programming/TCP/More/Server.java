@@ -31,24 +31,16 @@ public class Server {
         //1.创建对象，注册端口
         ServerSocket serverSocket=new ServerSocket(8888);
 
-        //2.使用serverSocket对象，调用一个accept方法，等待客户端的连接请求
-        Socket socket = serverSocket.accept();
+        while (true){
+            //这里的线程是一个主线程，主要接收管道中的信息
+            //子线程需要对主线程中的信息分别进行处理
+            //2.使用serverSocket对象，调用一个accept方法，等待客户端的连接请求
+            Socket socket = serverSocket.accept();
 
-        //3.从socket通信管道中的到一个字节输入流
-        InputStream is = socket.getInputStream();
+            //于是这里将主线程中的信息交给了子线程进行处理
+            //3.将这个客户端对应的socket通信管道，交给一个独立的线程负责处理
+            new ServerReaderThread(socket).start();
+        }
 
-        //4.把原始的字节输入流包装成数据输入流
-        DataInputStream dis=new DataInputStream(is);
-
-        //5.使用数据输入流读取客户端发送过来的数据
-        String rs = dis.readUTF();
-        System.out.println(rs);
-
-        //获取客户端的IP地址
-        System.out.println(socket.getRemoteSocketAddress());
-
-        //关闭管道
-        dis.close();
-        socket.close();
     }
 }
