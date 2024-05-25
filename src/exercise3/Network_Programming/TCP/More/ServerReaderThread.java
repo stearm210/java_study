@@ -31,8 +31,15 @@ public class ServerReaderThread extends Thread{
             InputStream is = socket.getInputStream();
             DataInputStream dis=new DataInputStream(is);
             while (true){
-                String msg=dis.readUTF();
-                System.out.println(msg);
+                try {
+                    String msg=dis.readUTF();
+                    System.out.println(msg);
+                } catch (IOException e) {
+                    System.out.println("客户端有人下线"+socket.getRemoteSocketAddress());
+                    dis.close();
+                    socket.close();
+                    break;
+                }
             }
         } catch (IOException e) {
             e.printStackTrace();
