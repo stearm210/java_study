@@ -1,10 +1,10 @@
-package exercise3.Network_Programming.TCP.More;
+package exercise3.Network_Programming.TCP.example;
 
 //写一个线程类，使得子线程可以对多个客户端信息进行处理
 
-import exercise3.Network_Programming.TCP.example.Server;
-
-import java.io.*;
+import java.io.DataInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.net.Socket;
 
 /**
@@ -34,15 +34,8 @@ public class ServerReaderThread extends Thread{
                 try {
                     String msg=dis.readUTF();
                     System.out.println(msg);
-
-                    //把这个消息分发给全部客户端进行接收
-                    sendMsgToAll(msg);
-
                 } catch (IOException e) {
                     System.out.println("客户端有人下线"+socket.getRemoteSocketAddress());
-                    //有人下线时，就将其的信息从socket中剔除
-                    Server.onLineSockets.remove(socket);
-
                     dis.close();
                     socket.close();
                     break;
@@ -50,20 +43,6 @@ public class ServerReaderThread extends Thread{
             }
         } catch (IOException e) {
             e.printStackTrace();
-        }
-    }
-
-    private void sendMsgToAll(String msg) throws IOException {
-        //将消息发送给全部的socket管道进行接收
-        for (Socket onLineSocket : Server.onLineSockets) {
-            //得到一个数据输出流，用于发送出数据
-            OutputStream os = onLineSocket.getOutputStream();
-            //对输出数据进行一个包装
-            DataOutputStream dos=new DataOutputStream(os);
-
-            //推送消息
-            dos.writeUTF(msg);
-            dos.flush();//刷新
         }
     }
 }
