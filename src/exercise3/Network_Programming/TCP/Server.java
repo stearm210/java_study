@@ -3,6 +3,12 @@ package exercise3.Network_Programming.TCP;
 /*
 * 服务端的开发一般使用serversocket包进行*/
 
+/*主要流程如下
+* 1.先创建对象，注册端口
+* 2.调用对象的accept方法，等待连接请求
+* 3.创建一个输入流
+* 4.将输入流中的数据调用输出*/
+
 import java.io.DataInputStream;
 import java.io.IOException;
 import java.io.InputStream;
