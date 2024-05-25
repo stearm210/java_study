@@ -1,10 +1,9 @@
-package exercise3.Network_Programming.TCP;
+package exercise3.Network_Programming.TCP.One;
 
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.net.Socket;
-import java.util.Scanner;
 
 /*
 * TCP通信一般使用以下方式
@@ -37,25 +36,11 @@ public class Client {
         //3.将低级字节输出流包装成数据输出流
         DataOutputStream dos=new DataOutputStream(os);
 
-        //用户输入消息，实现用户输入之后再进行发送
-        Scanner sc = new Scanner(System.in);
-        while (true) {
-            System.out.println("输入");
-            String msg=sc.nextLine();
+        //4.开始将数据写出去
+        dos.writeUTF("将数据写出去，连接成功");
+        dos.close();
 
-            //用户输入exit之后，就会退出
-            if ("exit".equals(msg)){
-                System.out.println("输入了exit，需要退出");
-                dos.close();
-                socket.close();
-                break;
-            }
-
-            //4.开始将数据写出去
-            dos.writeUTF(msg+"将数据写出去，连接成功");
-            //数据刷新
-            dos.flush();
-        }
+        socket.close();//释放连接资源
 
     }
 }
