@@ -1,13 +1,13 @@
 package exercise3.Network_Programming.TCP;
 
 /*
-* 服务端的开发一般使用serversocket包进行*/
+ * 服务端的开发一般使用serversocket包进行*/
 
 /*主要流程如下
-* 1.先创建对象，注册端口
-* 2.调用对象的accept方法，等待连接请求
-* 3.创建一个输入流
-* 4.将输入流中的数据调用输出*/
+ * 1.先创建对象，注册端口
+ * 2.调用对象的accept方法，等待连接请求
+ * 3.创建一个输入流
+ * 4.将输入流中的数据调用输出*/
 
 import java.io.DataInputStream;
 import java.io.IOException;
@@ -40,21 +40,15 @@ public class Server {
         //4.把原始的字节输入流包装成数据输入流
         DataInputStream dis=new DataInputStream(is);
 
-        //循环接收消息
-        //当用户输入socket之后就将这个输出离线。这里需要使用try-catch对输入的信息进行异常捕获，以便输出离线消息
-        while (true) {
-            try {
-                //5.使用数据输入流读取客户端发送过来的数据
-                String rs = dis.readUTF();
-                System.out.println(rs);
-                //获取客户端的IP地址
-                System.out.println(socket.getRemoteSocketAddress());
-            } catch (IOException e) {
-                System.out.println(socket.getRemoteSocketAddress()+"离线");
-                dis.close();
-                socket.close();
-                break;
-            }
-        }
+        //5.使用数据输入流读取客户端发送过来的数据
+        String rs = dis.readUTF();
+        System.out.println(rs);
+
+        //获取客户端的IP地址
+        System.out.println(socket.getRemoteSocketAddress());
+
+        //关闭管道
+        dis.close();
+        socket.close();
     }
 }
