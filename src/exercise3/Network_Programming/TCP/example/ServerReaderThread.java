@@ -17,7 +17,9 @@ import java.net.Socket;
 /*
 * 1.这里交给了一个子线程类进行操作
 * 2.子线程类需要用socket参数输入有参构造
-* 3.这里在run方法中写了子线程接收到一个客户端之后需要进行的操作*/
+* 3.这里在run方法中写了子线程接收到一个客户端之后需要进行的操作
+* */
+
 public class ServerReaderThread extends Thread{
     private Socket socket;
     public ServerReaderThread(Socket socket){
@@ -27,6 +29,8 @@ public class ServerReaderThread extends Thread{
     public void run() {
         try {
             InputStream is = socket.getInputStream();
+
+            //字节输入流进行升级，变为DataInputStream
             DataInputStream dis=new DataInputStream(is);
             while (true){
                 try {
@@ -35,7 +39,6 @@ public class ServerReaderThread extends Thread{
 
                     //把这个消息分发给全部客户端进行接收
                     sendMsgToAll(msg);
-
                 } catch (IOException e) {
                     System.out.println("客户端有人下线"+socket.getRemoteSocketAddress());
                     //有人下线时，就将其的信息从socket中剔除
