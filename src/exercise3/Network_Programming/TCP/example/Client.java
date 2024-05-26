@@ -55,7 +55,6 @@ public class Client {
             }
             //写数据出去
             dos.writeUTF(msg);
-
             //刷新数据
             dos.flush();
         }
