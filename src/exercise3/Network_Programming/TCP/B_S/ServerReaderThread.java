@@ -32,6 +32,7 @@ public class ServerReaderThread extends Thread{
             ps.println("Content-Type:text/html;charset=UTF-8");
             ps.println();//换行
             ps.println("响应网页信息");
+            ps.close();
             socket.close();
 
         } catch (IOException e) {
