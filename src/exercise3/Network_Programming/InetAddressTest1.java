@@ -28,6 +28,5 @@ public class InetAddressTest1 {
 
         //3.判断当前主机是否与其余IP连通。相当于是一个ping命令
         System.out.println(ip2.isReachable(6000));
-
     }
 }
